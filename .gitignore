@@ -1,0 +1,7 @@
+*.tgz
+authorizer.cert
+authorizer.key
+authorizer.xml
+authorizer
+NOTES
+TODO

@@ -1,0 +1,12 @@
+url: "http://localhost:8000"
+keyfile: "authorizer.key"
+certificatefile: "authorizer.cert"
+allowidpinitiated: false
+idpmetadataurl: "https://samltest.id/saml/idp"
+signrequest: true # some IdP require the SLO request to be signed
+addr: ":8000"
+# (foo==bar && abc==xyz) || foo==baz
+requiredAttributes:
+  - foo: bar
+    abc: xyz
+  - foo: baz

@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  ingress-saml-authorizer:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-01-09T03:38:55.752825694+01:00"
+    description: A Helm chart for ingress-saml-authorizer
+    digest: fd8653083a178a191af472f9f5199983be0d499dcb7007704621a99235060455
+    name: ingress-saml-authorizer
+    type: application
+    urls:
+    - ingress-saml-authorizer-1.0.0.tgz
+    version: 1.0.0
+generated: "2022-01-09T03:38:55.752347876+01:00"

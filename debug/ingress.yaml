@@ -1,0 +1,42 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/auth-url: "http://$host/saml/auth"
+    nginx.ingress.kubernetes.io/auth-signin: "http://$host/saml/signin"
+    nginx.ingress.kubernetes.io/auth-signin-redirect-param: rd
+    nginx.ingress.kubernetes.io/auth-response-headers: X-Uid,X-Mail,X-Displayname
+    nginx.ingress.kubernetes.io/auth-cache-key: $cookie_token
+  name: my-http-echo
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ingress.local
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-http-echo
+            port:
+              number: 5678
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: test-authorizer
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ingress.local
+    http:
+      paths:
+      - path: /saml
+        pathType: Prefix
+        backend:
+          service:
+            name: test-authorizer
+            port:
+              number: 80

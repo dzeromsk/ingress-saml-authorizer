@@ -1,0 +1,15 @@
+{{- if .Values.config.create -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "authorizer.configName" . }}
+  labels:
+    {{- include "authorizer.labels" . | nindent 4 }}
+  {{- with .Values.config.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+data:
+  config.yaml: |
+  {{- toYaml .Values.config | nindent 4 }}
+{{- end }}

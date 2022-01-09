@@ -1,0 +1,4 @@
+config:
+  url: "http://ingress.local"
+  idpmetadataurl: "https://samltest.id/saml/idp"
+  useartifactresponse: true
