@@ -39,6 +39,13 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - -config=/etc/authorizer/config.yaml
+          volumeMounts:
+            - name: config
+              mountPath: /etc/authorizer
+              readOnly: true
+            - name: cert
+              mountPath: "/etc/authorizer/cert"
+              readOnly: true
           ports:
             - name: http
               containerPort: 8000
