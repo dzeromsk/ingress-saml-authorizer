@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ingress-saml-authorizer
-description: SAML Service Provider and Authorizer for NGINX Ingress Controller
+description: SAML Authorizer for NGINX Ingress Controller
 type: application
 version: 1.0.0
 appVersion: "1.0.0"
