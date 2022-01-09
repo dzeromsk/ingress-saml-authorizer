@@ -3,6 +3,16 @@ entries:
   ingress-saml-authorizer:
   - apiVersion: v2
     appVersion: 1.0.4
+    created: "2022-01-09T18:16:25.17738579Z"
+    description: SAML Authorizer for NGINX Ingress Controller
+    digest: f1465ef04b7b642a450af8af78fd6970f690103263d2286530a98ab7a609dc5a
+    name: ingress-saml-authorizer
+    type: application
+    urls:
+    - https://github.com/dzeromsk/ingress-saml-authorizer/releases/download/ingress-saml-authorizer-1.0.5/ingress-saml-authorizer-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
+    appVersion: 1.0.4
     created: "2022-01-09T18:08:36.432293127Z"
     description: SAML Authorizer for NGINX Ingress Controller
     digest: 9ad4cdd9d511d179d5090b79374d01b394a04721151cb59c7af0fe6b0c2d92c8
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/dzeromsk/ingress-saml-authorizer/releases/download/ingress-saml-authorizer-1.0.4/ingress-saml-authorizer-1.0.4.tgz
     version: 1.0.4
-generated: "2022-01-09T18:08:36.432299327Z"
+generated: "2022-01-09T18:16:25.17740489Z"
